@@ -1,0 +1,43 @@
+body {
+    background: rgb(154, 154, 209);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin:auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.585);
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+div {
+    text-align: center;
+}
+
+input#data_nascimento {
+    border-radius: 10px;
+    width: auto;
+    height: 20px;
+}
+
+input#botao {
+    border-radius: 20px;
+    background: rgb(56, 165, 56);
+    color: white;
+    padding: 10px;
+}
+
+

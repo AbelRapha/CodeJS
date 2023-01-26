@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Verificação de Nacionalidade</title>
+    <style>
+        p {
+            font: normal 15pt Arial;
+        }
+        input#txtvel {
+            font: normal 15pt Arial;
+            width: 80px;
+        }
+        input#button {
+            background-color:blue;
+            font: normal 15pt Arial;
+            color: white;
+        }
+        div#resultado {
+            margin-top: 20;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Verificação de nacionalidade</h1>
+    <p>Digite o país em que você nasceu: </p>
+    <input type="text" id="txtvel">
+    <input type="button" id="button" value="Verificar" onclick="verificar()">
+    <div id="resultado">
+    </div>
+
+    <script>
+        function verificar(){
+            nacionalidade = window.document.querySelector('input#txtvel')
+            resultado = window.document.getElementById('resultado')
+            if (nacionalidade.value.toUpperCase() == "BRASIL"){
+                resultado.innerText = 'Você é Brasileiro'
+            }
+            else{
+                resultado.innerText = `Você não é Brasileiro, mas sim, ${nacionalidade.value}`
+            }
+        }
+    </script>
+</body>
+</html>

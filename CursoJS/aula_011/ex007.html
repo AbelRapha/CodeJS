@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Multas</title>
+    <style>
+        p {
+            font: normal 15pt Arial;
+        }
+        input#txtvel {
+            font: normal 15pt Arial;
+            width: 80px;
+        }
+        input#button {
+            background-color:blue;
+            font: normal 15pt Arial;
+            color: white;
+        }
+        div#resultado {
+            margin-top: 20;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <p>Digite a velocidade em que o veículo se encontra:</p>
+    <input type="number" id="txtvel"> Km/h
+    <input type="button" id="button" value="Verificar" onclick="verificar()">
+    <div id="resultado">
+
+    </div>
+
+    <script>
+        function verificar(){
+            velocidade = window.document.querySelector('input#txtvel')
+            resultado = window.document.getElementById('resultado')
+            if (Number(velocidade.value) > 50){
+                resultado.innerText = 'Acima da velocidade permitida'
+            }
+            else{
+                resultado.innerText = 'Dentro da Velocidade permitida'
+            }
+        }
+    </script>
+</body>
+</html>
